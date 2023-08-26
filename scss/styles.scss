@@ -1,0 +1,97 @@
+@import "configs";
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 80rem;
+  width: 100%;
+  background-color: $white;
+  border-radius: $bRadiusmedium;
+
+  .content {
+    padding: 10rem 4rem 0rem 5rem;
+    .title {
+      font-size: 5rem;
+      color: $darkSlateGrey;
+    }
+
+    .desc {
+      font-size: 1.6rem;
+      line-height: 1.5;
+      color: $charcoalGrey;
+      margin: 2rem 0;
+    }
+
+    .list-container {
+      margin-bottom: 3rem;
+      .list-items {
+        display: flex;
+        align-items: center;
+        font-size: 1.4rem;
+        color: $charcoalGrey;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .input-control {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-control.succes {
+      border-color: #09c372;
+    }
+
+    .input-control .error {
+      border-color: #ff3860;
+    }
+
+    label,
+    input {
+      display: block;
+    }
+
+    label {
+      color: $darkSlateGrey;
+      font-weight: 700;
+    }
+
+    #email {
+      padding: 1.5rem 2rem;
+      margin-top: 0.5rem;
+      border: 1px solid $grey;
+      outline: none;
+      color: $darkSlateGrey;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 1.6rem;
+      &:active {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .main-img {
+    padding: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+
+  .btn-primary {
+    margin-top: 2rem;
+    .btn {
+      cursor: pointer;
+      width: 100%;
+      padding: 1.5rem;
+      background-color: $darkSlateGrey;
+      color: $white;
+      font-weight: 700;
+      font-family: "Roboto", sans-serif;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+    }
+  }
+}

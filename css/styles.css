@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-color: hsl(234, 29%, 20%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 80rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 30px;
+}
+.container .content {
+  padding: 10rem 4rem 0rem 5rem;
+}
+.container .content .title {
+  font-size: 5rem;
+  color: hsl(234, 29%, 20%);
+}
+.container .content .desc {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  color: hsl(235, 18%, 26%);
+  margin: 2rem 0;
+}
+.container .content .list-container {
+  margin-bottom: 3rem;
+}
+.container .content .list-container .list-items {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: hsl(235, 18%, 26%);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.container .content .input-control {
+  display: flex;
+  flex-direction: column;
+}
+.container .content .input-control.succes {
+  border-color: #09c372;
+}
+.container .content .input-control .error {
+  border-color: #ff3860;
+}
+.container .content label,
+.container .content input {
+  display: block;
+}
+.container .content label {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+}
+.container .content #email {
+  padding: 1.5rem 2rem;
+  margin-top: 0.5rem;
+  border: 1px solid hsl(231, 7%, 60%);
+  outline: none;
+  color: hsl(234, 29%, 20%);
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.6rem;
+}
+.container .content #email:active {
+  cursor: pointer;
+}
+.container .main-img {
+  padding: 2rem;
+}
+.container .main-img img {
+  width: 100%;
+}
+.container .btn-primary {
+  margin-top: 2rem;
+}
+.container .btn-primary .btn {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.5rem;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}

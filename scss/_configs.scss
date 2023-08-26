@@ -1,0 +1,48 @@
+// PRIMARY
+
+$tomato: hsl(4, 100%, 67%);
+// NEUTRAL
+$darkSlateGrey: hsl(234, 29%, 20%);
+$charcoalGrey: hsl(235, 18%, 26%);
+$grey: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+$paragraph: 16px;
+$bRadiusSmall: 10px;
+$bRadiusmedium: 30px;
+$bRadiusLarge: 50px;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexDirection($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-color: $darkSlateGrey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
