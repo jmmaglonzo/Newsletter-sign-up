@@ -54,16 +54,6 @@ li {
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.container .content .input-control {
-  display: flex;
-  flex-direction: column;
-}
-.container .content .input-control.succes {
-  border-color: #09c372;
-}
-.container .content .input-control .error {
-  border-color: #ff3860;
-}
 .container .content label,
 .container .content input {
   display: block;
@@ -71,6 +61,11 @@ li {
 .container .content label {
   color: hsl(234, 29%, 20%);
   font-weight: 700;
+  position: relative;
+}
+.container .content label .error-message {
+  position: absolute;
+  right: 0;
 }
 .container .content #email {
   padding: 1.5rem 2rem;
@@ -105,4 +100,53 @@ li {
   border: none;
   outline: none;
   border-radius: 5px;
+}
+.container .btn-primary .btn:active {
+  background: linear-gradient(240deg, hsl(4, 100%, 67%), hsl(346, 100%, 66%));
+}
+
+.active {
+  display: none;
+}
+
+.success {
+  max-width: 40rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 3rem 5rem;
+  border-radius: 30px;
+}
+.success .check-icon img {
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+.success h1 {
+  color: hsl(234, 29%, 20%);
+  font-size: 4.5rem;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+.success p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: hsl(234, 29%, 20%);
+  margin-bottom: 3rem;
+}
+.success p span {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+}
+.success .btn-2 {
+  width: 100%;
+  padding: 1.3rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(234, 29%, 20%);
+  font-family: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.success .btn-2:active {
+  background: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(4, 100%, 67%));
 }

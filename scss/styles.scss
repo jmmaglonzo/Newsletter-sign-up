@@ -34,19 +34,6 @@
       }
     }
 
-    .input-control {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .input-control.succes {
-      border-color: #09c372;
-    }
-
-    .input-control .error {
-      border-color: #ff3860;
-    }
-
     label,
     input {
       display: block;
@@ -55,6 +42,11 @@
     label {
       color: $darkSlateGrey;
       font-weight: 700;
+      position: relative;
+      .error-message {
+        position: absolute;
+        right: 0;
+      }
     }
 
     #email {
@@ -92,6 +84,59 @@
       border: none;
       outline: none;
       border-radius: 5px;
+      &:active {
+        background: linear-gradient(240deg, $tomato, $pink);
+      }
+    }
+  }
+}
+
+.active {
+  display: none;
+}
+
+.success {
+  max-width: 40rem;
+  background-color: $white;
+  padding: 3rem 5rem;
+  border-radius: 30px;
+
+  .check-icon img {
+    width: 4rem;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    color: $darkSlateGrey;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $darkSlateGrey;
+    margin-bottom: 3rem;
+
+    span {
+      color: $darkSlateGrey;
+      font-weight: 700;
+    }
+  }
+
+  .btn-2 {
+    width: 100%;
+    padding: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: $white;
+    background-color: $darkSlateGrey;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    &:active {
+      background: linear-gradient((90deg, $pink, $tomato));
     }
   }
 }
