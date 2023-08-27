@@ -32,4 +32,8 @@ submitBtn.addEventListener("click", () => {
 dismissBtn.addEventListener("click", () => {
   container.classList.toggle("active");
   success.classList.toggle("active");
+  inputField.value = "";
+  inputField.style.borderColor = "#fff";
+  inputField.style.color = "#242742";
+  inputField.style.backgroundColor = "#fff";
 });

@@ -23,14 +23,14 @@ li {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   max-width: 80rem;
   width: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 30px;
 }
 .container .content {
+  flex: 50%;
   padding: 10rem 4rem 0rem 5rem;
 }
 .container .content .title {
@@ -81,10 +81,11 @@ li {
   cursor: pointer;
 }
 .container .main-img {
-  padding: 2rem;
+  flex: 50%;
 }
 .container .main-img img {
   width: 100%;
+  padding: 2rem;
 }
 .container .btn-primary {
   margin-top: 2rem;
@@ -149,4 +150,20 @@ li {
 }
 .success .btn-2:active {
   background: linear-gradient(90deg, hsl(346, 100%, 66%), hsl(4, 100%, 67%));
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    flex-direction: column-reverse;
+    overflow: hidden;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  .container .content {
+    padding: 5rem 3rem 5rem 4rem;
+  }
+  .container .main-img img {
+    padding: 0;
+    content: url(../assets/images/illustration-sign-up-mobile.svg);
+  }
 }
