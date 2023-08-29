@@ -7,6 +7,7 @@ const account = document.getElementById("account");
 
 const container = document.querySelector(".container");
 const success = document.querySelector(".success");
+
 const validateEmail = () => {
   if (
     !inputField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
@@ -25,15 +26,15 @@ const validateEmail = () => {
   }
 };
 
-submitBtn.addEventListener("click", () => {
-  validateEmail();
-});
-
-dismissBtn.addEventListener("click", () => {
-  container.classList.toggle("active");
-  success.classList.toggle("active");
+const removeMessage = () => {
+  container.classList.remove("active");
+  success.classList.add("active");
   inputField.value = "";
   inputField.style.borderColor = "#fff";
   inputField.style.color = "#242742";
   inputField.style.backgroundColor = "#fff";
-});
+};
+
+submitBtn.addEventListener("click", validateEmail);
+
+dismissBtn.addEventListener("click", removeMessage);
